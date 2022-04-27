@@ -11,19 +11,23 @@ import './App.css';
 function App() {
 
   const [user, setUser] = useState(''); // Estado
+  const [avatar, setAvatar] = useState(''); // Estado
 
   //Login
-  const login = (name) => {
+  const login = (name, avatar) => {
     setUser(name);
+    setAvatar(avatar);
   }
 
   //Logout 
   const logout = () => {
     setUser('');
+    setAvatar('');
   }
 
   const data = {
     user,
+    avatar,
     login,
     logout
   }
