@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { userContext } from '../../../context/userContext';
+import { Button, TextField } from '@mui/material';
 
 class Home extends Component {
   static contextType = userContext;
@@ -27,8 +28,10 @@ class Home extends Component {
       }
     );
 
-    event.target.user.value = '';
-    event.target.avatar.value = '';
+    event.target.reset();
+
+/*     event.target.user.value = '';
+    event.target.avatar.value = ''; */
 
     this.context.login(user, avatar);
   }
@@ -36,14 +39,18 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Contacto</h1>
+      <div className='center'>
+        <h1>Home</h1>
         <form onSubmit={this.login}>
-          <label htmlFor="user">Nombre de usuario:
+          <TextField id="user" label="Nombre" variant="outlined" size="small" />
+          <TextField id="avatar" label="Imagen" variant="outlined" size="small" /><br/>
+          <Button variant="outlined" size="small" type="submit">Login</Button>
+
+          {/*     <label htmlFor="user">Nombre de usuario:
             <input type='text' id='user' name='user' /></label><br />
           <label htmlFor="avatar">Imagen:
             <input type='text' id='avatar' name='avatar' /></label>
-          <button type="submit">Login</button>
+          <button type="submit">Login</button> */}
         </form>
       </div>
     );

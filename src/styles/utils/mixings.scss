@@ -1,0 +1,10 @@
+// Trae varias variables en una sola propiedad
+
+@mixin column {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}

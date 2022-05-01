@@ -23,7 +23,6 @@ class Main extends Component {
     return (
       <main>
         <Routes>
-
           <Route index element={<Home />} />
           <Route element={<Home />} path='/home' />
           <Route element={<Form add={(oneNew) => this.addNew(oneNew)} />} path='/form' />

@@ -31,14 +31,13 @@ class ListNews extends Component {
   paintNews = () => {
     return this.state.news.map((oneNew) => {
       let id = uuidv4();
-      console.log(oneNew);
       return <Card data={oneNew} key={id} />
     });
   }
 
   render() {
     return (
-      <div>
+      <div className='center'>
         <h1>Fakes News</h1>
         {this.paintNews()}
       </div>
