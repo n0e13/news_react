@@ -2,7 +2,10 @@ import React, { Component } from "react";
 
 class Footer extends Component {
   render() {
-    return <div>Hecho con 💜 por n0e</div>;
+    return (
+      <div className="footer__text">
+        <p>Hecho con 💜  por n0e</p>
+      </div>);
   }
 }
 

@@ -1,12 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
-
 import { useState } from 'react';
 import { userContext } from './context/userContext';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer';
-
-import './App.css';
+import './styles/styles.scss'
+/* import './App.css'; */
 
 function App() {
 
@@ -35,7 +34,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-      <userContext.Provider value={data}>
+        <userContext.Provider value={data}>
           <Header />
           <Main />
         </userContext.Provider>

@@ -1,0 +1,10 @@
+// Importamos el estilo del nav para toda la app
+@import './components/nav';
+@import './components/header';
+@import './components/form';
+@import './components/home';
+@import './components/listnews';
+@import './components/footer';
+
+// Aquí se aplican los estilos a toda la web importando los archivos
+@import './views/app';

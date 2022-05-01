@@ -23,19 +23,20 @@ class Form extends Component {
     this.props.add(oneNew);
 
     // limpio el formulario
-    e.target.title.value = '';
+    e.target.reset();
+/*     e.target.title.value = '';
     e.target.subtitle.value = '';
-    e.target.img.value = '';
+    e.target.img.value = ''; */
   }
 
   render() {
     return (
-      <div>
+      <div className='center'>
         <h1>Añade tu noticia</h1>
         <form onSubmit={this.createNew}>
         <TextField id="title" label="Título" variant="outlined" size="small"/>
         <TextField id="subtitle" label="Subtítulo" variant="outlined" size="small"/>
-        <TextField id="img" label="Imagen" variant="outlined" size="small"/>
+        <TextField id="img" label="Imagen" variant="outlined" size="small"/><br/>
 {/* 
           <label htmlFor="title">Título:
             <input type='text' id='title' name='title' /></label><br />
